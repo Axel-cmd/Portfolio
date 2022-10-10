@@ -1,0 +1,123 @@
+/* GLOBAL */
+
+/* ne fonctionne pas */
+:root {
+    --background-color: #DFE6E9,
+}
+
+body {
+    margin: 0;
+    padding: 5%;
+    background-color: #DFE6E9;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#hamb-menu {
+    width: auto;
+    height: 25px;
+    color: #FF7675;
+}
+
+.navMenu {
+    display: none;
+    padding-top: 5px;
+}
+
+.navMenu a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 40px;
+    /* width: 80px; */
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+    color: #FF7675;
+}
+
+.navMenu .dot{
+    width: 6px;
+    height: 6px;
+    background: #FF7675;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.navMenu a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(65px);
+    transform: translateX(65px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+  
+.navMenu a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(190px);
+    transform: translateX(190px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(360px);
+    transform: translateX(360px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+    -webkit-transform: translateX(503px);
+    transform: translateX(503px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.navMenu a:nth-child(5):hover ~ .dot {
+    -webkit-transform: translateX(624px);
+    transform: translateX(624px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+/* responsive design */
+
+/* pour les écran pc */
+@media screen and (min-width: 600px) {
+    body{
+        padding:2%;
+    }
+    #hamb-menu {
+        display: none;
+    }
+    .navMenu {
+        display: inline-block;
+    }
+}
