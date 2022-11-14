@@ -70,9 +70,5 @@ window.addEventListener("DOMContentLoaded", () => {
         new DynamicText(dynamicContent, JSON.parse(toRotate), period);
     }
 
-    // var css = document.createElement("style");
-    // css.type = "text/css";
-    // css.innerHTML = ".container-dynamic > .dynamic-text { border-right: .15em solid #FF7675; color: #FF7675; font-size: 1.75em}";
-    // document.body.appendChild(css);
     
 })

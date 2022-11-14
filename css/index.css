@@ -17,9 +17,13 @@ body {
 
 header {
     margin: 0;
-    padding: 0;
+    padding: 2%;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 header h3 {
@@ -113,48 +117,6 @@ header h3 {
 
 /* #endregion */
 
-
-/* #region CONTENT */
-
-/* #region HOME */
-
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.home-svg {
-    width: 90%;
-}
-
-.home-text,
-.dynamic-text,
-.description {
-    padding: 0;
-    margin: 0;
-}
-
-.home-content .description {
-    opacity: .8;
-}
-
-.container-dynamic {
-    display: inline-block;
-}
-
-.dynamic-text {
-    border-right: .15em solid #FF7675;
-    color: #FF7675;
-    font-size: 1.75em;
-}
-
-
-/* #endregion */
-
-/* #endregion */
-
-
 /* #region NAVBAR tel  */
 
 .wrapper {
@@ -163,7 +125,7 @@ header h3 {
     right: -100%;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
     transition: all 0.6s ease-in-out;
 }
 
@@ -211,17 +173,88 @@ header h3 {
 
 /* #endregion */
 
+
+
+/* #region CONTENT */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-title {
+    margin-top: 2%;
+    text-transform: uppercase;
+}
+
+/* #region HOME */
+
+
+.home-svg {
+    width: 90%;
+}
+
+.home-text,
+.dynamic-text,
+.description {
+    padding: 0;
+    margin: 0;
+}
+
+.home-content .description {
+    opacity: .8;
+}
+
+.home-text {
+    font-weight: 700;
+}
+
+.container-dynamic {
+    display: inline-block;
+}
+
+.dynamic-text {
+    border-right: .15em solid #FF7675;
+    color: #FF7675;
+    font-size: 1.75em;
+}
+
+
+/* #endregion */
+
+/* #endregion */
+
+
 /* #region RESPONSIVE */
 
 /* responsive design */
 
-/* pour les écran pc */
-@media screen and (min-width: 750px) {
+/* pour les écran portable */
+@media screen and (min-width: 720px) {
 
     body{
         padding:2%;
     }
 
+    .container {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    .home-svg {
+        width: 49%;
+    }
+
+    .home-content {
+        width: 50%;
+    }
+
+}
+
+/* tablette */
+@media screen and (min-width: 900px) {
     #hamb-menu {
         display: none;
     }
@@ -230,20 +263,28 @@ header h3 {
         display: inline-block;
     }
 
-    .home-container {
-        width: 100%;
-        flex-direction: row-reverse;
-        justify-content: space-evenly;
+    .home-content {
+        font-size: 1em;
     }
+}
 
-    .home-svg {
-        width: 50%;
+/* tablette mode paysage */
+@media screen and (min-width: 1024px) {
+    .home-content {
+        font-size: 1.5em;
     }
+}
+
+/* pc */
+@media screen and (min-width: 1200px) {
 
     .home-content {
-        width: 50%;
+        font-size: 2em;
     }
-
+    
+   
 }
+
+
 
 /* #endregion */
