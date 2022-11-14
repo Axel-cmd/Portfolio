@@ -48,17 +48,22 @@ window.addEventListener("DOMContentLoaded", () => {
     const hambMenu = document.getElementById("hamb-menu");
     const navMenuTel = document.getElementById("navMenuTel");
     const dynamicContent = document.getElementById("container-dynamic");
+    const header = document.getElementById("header-container");
 
     /****   MENU  ****/
     
     hambMenu.addEventListener('click', () => {
+        // header.classList.remove("partially-transparent")
         navMenuTel.style.right = 0;
+
     })
 
     const closeNavMenuTel = document.getElementById('close-wrapper');
 
     closeNavMenuTel.addEventListener('click', () => {
         navMenuTel.style.right = "-100%";
+        // header.classList.add("partially-transparent");
+
     })
 
     /****** TEXTE DYNAMIQUE ******/
@@ -70,5 +75,17 @@ window.addEventListener("DOMContentLoaded", () => {
         new DynamicText(dynamicContent, JSON.parse(toRotate), period);
     }
 
+
+    window.onscroll = function name(e) {
+        const posY = window.scrollY;
+        if(posY > 0 ) {
+            header.classList.add("partially-transparent");
+        } else 
+        {
+            header.classList.remove("partially-transparent")
+        }
+    }
+
     
 })
+
