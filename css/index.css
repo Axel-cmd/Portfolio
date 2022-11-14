@@ -143,54 +143,12 @@ header h3 {
     display: inline-block;
 }
 
-/* .dynamic-text {
-    font-size: 1.75em;
-    color: #FF7675;
-    border-right: .15em solid #FF7675;
-} */
-
-/* @keyframes blink {
-    from {border-color: transparent;}
-    to {border-color: #FF7675;}
-} */
-
-/** effet machine à écrire */
-
-/* .container-dynamic {
-    display: inline-block;
-
-}
-
 .dynamic-text {
-    font-size: 1.75em;
-    color: #FF7675;
-    overflow: hidden;
     border-right: .15em solid #FF7675;
-    width: 0;
-    white-space: nowrap;
-    animation: 
-        typing 3s steps(20, end) infinite,
-        blink .8s infinite;
+    color: #FF7675;
+    font-size: 1.75em;
 }
 
-
-@keyframes typing {
-    0% {width: 0;}
-    50% {width: 100%;}
-    75% {width: 100%;}
-    100% {width: 0;}
-}
-
-@keyframes blink {
-    from {border-color: transparent;}
-    to {border-color: #FF7675;}
-}
-
-@keyframes text {
-    0% { content: "Ingénieur R&D";}
-    50% { content: "Alternant";}
-    100% { content: "Etudiant";}
-} */
 
 /* #endregion */
 

@@ -1,5 +1,5 @@
 
-class TxtType {
+class DynamicText {
     constructor(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -49,6 +49,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const navMenuTel = document.getElementById("navMenuTel");
     const dynamicContent = document.getElementById("container-dynamic");
 
+    /****   MENU  ****/
+    
     hambMenu.addEventListener('click', () => {
         navMenuTel.style.right = 0;
     })
@@ -59,17 +61,18 @@ window.addEventListener("DOMContentLoaded", () => {
         navMenuTel.style.right = "-100%";
     })
 
+    /****** TEXTE DYNAMIQUE ******/
 
     const toRotate = dynamicContent.getAttribute('data-type');
     const period= dynamicContent.getAttribute('data-period');
 
     if(toRotate) {
-        new TxtType(dynamicContent, JSON.parse(toRotate), period);
+        new DynamicText(dynamicContent, JSON.parse(toRotate), period);
     }
 
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".container-dynamic > .dynamic-text { border-right: .15em solid #FF7675; color: #FF7675; font-size: 1.75em}";
-    document.body.appendChild(css);
+    // var css = document.createElement("style");
+    // css.type = "text/css";
+    // css.innerHTML = ".container-dynamic > .dynamic-text { border-right: .15em solid #FF7675; color: #FF7675; font-size: 1.75em}";
+    // document.body.appendChild(css);
     
 })
