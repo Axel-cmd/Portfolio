@@ -306,6 +306,15 @@ header h3 {
     color: #FF7675;
 }
 
+.loader {
+    font-size: 1em;
+    color: #FF7675;
+    text-transform: uppercase;
+}
+
+.loader-img {
+    width: 90%;
+}
 
 /* #region RESPONSIVE */
 
@@ -336,6 +345,10 @@ header h3 {
         padding-top: 6%;
     }
 
+    .loader {
+        font-size: 3em;
+    }
+
 }
 
 /* tablette */
@@ -360,6 +373,8 @@ header h3 {
         font-size: 1.5em;
         margin: 0;
     }
+
+    
 
 }
 
@@ -393,8 +408,3 @@ header h3 {
 
 /* #endregion */
 
-.loader {
-    font-size: 3em;
-    color: #FF7675;
-    text-transform: uppercase;
-}
