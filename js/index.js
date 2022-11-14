@@ -47,11 +47,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const hambMenu = document.getElementById("hamb-menu");
     const navMenuTel = document.getElementById("navMenuTel");
+    const itemMenu = document.getElementsByClassName("item-menu");
     const dynamicContent = document.getElementById("container-dynamic");
     const header = document.getElementById("header-container");
 
     /****   MENU  ****/
     
+    for (const item of itemMenu) {
+        item.addEventListener('click', () => {
+            navMenuTel.style.right = "-100%";
+        })
+    }
+   
+
     hambMenu.addEventListener('click', () => {
         // header.classList.remove("partially-transparent")
         navMenuTel.style.right = 0;
