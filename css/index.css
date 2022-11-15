@@ -268,6 +268,93 @@ header h3 {
 
 /* #endregion */
 
+/* #region EXPERIENCE */
+
+.timeline {
+    /* Used to position the left vertical line */
+    position: relative;
+    width: 100%;
+}
+
+.timeline__line {
+    /* Border */
+    border-right: 2px solid #FF7675;
+
+    /* Positioned at the left */
+    left: 0.75rem;
+    position: absolute;
+    top: 0px;
+
+    /* Take full height */
+    height: 100%;
+}
+
+.timeline__items {
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.timeline__item {
+    margin-top: 10%;
+}
+.timeline__item:nth-child(1) {
+    margin-top: 0
+}
+
+.timeline__top {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+}
+
+.timeline__circle {
+    /* Rounded border */
+    background-color: #FF7675;
+    border-radius: 9999px;
+
+    /* Size */
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.timeline__title {
+    /* Take available width */
+    flex: 1;
+    margin-left: 0.5rem;
+    color: #FF7675;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.timeline__title span {
+    color: rgb(0, 0, 0);
+    opacity: .8;
+    font-size: .75em;
+    font-weight: 400;
+}
+
+.timeline__desc {
+    /* Make it align with the title */
+    margin-left: 2rem;
+    font-size: .75em;
+}
+
+.timeline-desc-title {
+    margin-top: 2%;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.timeline-footer {
+    margin-top: 2%;
+    color: #FF7675;
+    font-style: italic;
+    opacity: .8;
+}
+
+/* #endregion */
 
 /* #region CONTACT */
 
@@ -470,9 +557,6 @@ header h3 {
         font-size: 1.25em;
     }
 
-    .contact-desc {
-    }
-
 }
 
 /* tablette mode paysage */
@@ -501,6 +585,15 @@ header h3 {
         width: 30px;
         transition: all 1ms ease-out;
     }
+
+    .timeline {
+        width: 90%;
+    }
+
+    .timeline__item {
+        font-size: 1.5em;
+    }
+
 }
 
 /* pc */
@@ -518,7 +611,22 @@ header h3 {
         font-size: 1em;
     }
 
-    
+    .timeline {
+        width: 90%;
+    }
+
+    .timeline__item {
+        font-size: 2em;
+    }
+
+    .timeline__title
+     {
+        margin-left: 2em;
+    }
+
+    .timeline__desc {
+        margin-left: 3.5em;
+    }
 
 
 }
