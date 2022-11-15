@@ -316,6 +316,24 @@ header h3 {
     width: 90%;
 }
 
+
+/* FOOTER  */
+
+.footer {
+    margin-top: 50px;
+    font-size: .75em;
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid;
+}
+
+.footer a:hover {
+    border-bottom: 1px transparent;
+}
+
 /* #region RESPONSIVE */
 
 /* responsive design */
@@ -400,6 +418,10 @@ header h3 {
 
     .container-title{
         font-size: 3em;
+    }
+
+    .footer {
+        font-size: 1em;
     }
 
 }
