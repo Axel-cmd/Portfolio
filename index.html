@@ -12,7 +12,6 @@
 
         <!-- STYLES -->
         <link rel="stylesheet" href="./css/index.css">
-        <link rel="stylesheet" href="./css/nav.css">
 
         <title>Axel MINART | Portfolio</title>
     </head>
@@ -51,15 +50,15 @@
                 <li><a class="item-menu" href="#experiences">expériences</a></li>
                 <li><a class="item-menu" href="#skills">compétences</a></li>
                 <li><a class="item-menu" href="#projects">projets</a></li>
-                <li><a class="item-menu" href="#contact">contacts</a></li>
+                <li><a class="item-menu" href="#contact">contact</a></li>
             </ul>
         </div>
 
-        <section id="page-content">
+        <div id="page-content">
 
             <!-- accueil -->
 
-            <div class="container-home container" id="home">
+            <section class="container-home container" id="home">
                 <img class="home-svg" src="./public/22.svg" alt="SVG d'une personne sur un pc">
                 <div class="home-content">
                     <div class="home-text">Je suis,</div>
@@ -78,12 +77,11 @@
                     <button onclick="location.href = '#contact'" class="button contact-button" >CONTACT</button>
                 </div>
 
-            </div>
+            </section>
 
 
             <!-- expériences -->
-
-            <div class="container" id="experiences">
+            <section class="container" id="experiences">
                 <hr>
                 <h2 class="container-title">expériences</h2>
 
@@ -192,29 +190,29 @@
                     </div>
                 </div>
 
-            </div>
+            </section>
 
 
-            <div class="container" id="skills">
+            <section class="container" id="skills">
                 <hr>
                 <h2 class="container-title">compétences</h2>
 
                 <img src="./public/304.svg" class="loader-img" alt="Image">
                 <div class="loader" >EN COURS...</div>
 
-            </div>
+            </section>
 
-            <div class="container" id="projects">
+            <section class="container" id="projects">
                 <hr>
                 <h2 class="container-title">projets</h2>
 
                 <img src="./public/304.svg" class="loader-img" alt="Image">
                 <div class="loader" >EN COURS...</div>
 
-            </div>
+            </section>
 
 
-            <div class="container" id="contact">
+            <section class="container" id="contact">
                 <hr>
                 <h2 class="container-title">contact</h2>
 
@@ -246,11 +244,11 @@
                     </div>
                 </div>
 
-            </div>
+            </section>
 
             
 
-        </section>
+        </div>
 
         <footer class="footer">
             <div>
@@ -261,5 +259,6 @@
     </body>
 
     <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="./js/index.js"></script>
 </html>

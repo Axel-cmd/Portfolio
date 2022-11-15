@@ -42,6 +42,36 @@ class DynamicText {
 }
 
 
+function onScrollTransparentHeader(header) {
+    const posY = window.scrollY;
+    if (posY > 0) {
+        header.classList.add("partially-transparent");
+    }
+    else {
+        header.classList.remove("partially-transparent");
+    }
+}
+
+function navHighlighter(sections){
+    let scrollY = window.scrollY;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+
+        const sectionTop = (current.getBoundingClientRect().top + window.screenY) -1;
+        const sectionId = current.getAttribute("id");
+
+        if(scrollY > sectionTop && scrollY <= sectionTop+sectionHeight){
+            // console.log(`active ${sectionId}`)
+            const el = document.querySelector("a[href*=" + sectionId + "]")
+            console.log(el)
+            el.classList.add("active");
+        } else 
+        {
+            // document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
+        }
+    });
+}
 
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -50,6 +80,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const itemMenu = document.getElementsByClassName("item-menu");
     const dynamicContent = document.getElementById("container-dynamic");
     const header = document.getElementById("header-container");
+    const sections = document.querySelectorAll("section[id]");
 
     /****   MENU  ****/
     
@@ -85,13 +116,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
     window.onscroll = function name(e) {
-        const posY = window.scrollY;
-        if(posY > 0 ) {
-            header.classList.add("partially-transparent");
-        } else 
-        {
-            header.classList.remove("partially-transparent")
-        }
+        onScrollTransparentHeader(header);
+        // navHighlighter(sections);
     }
 
     var cursor = document.getElementById("cursor");
