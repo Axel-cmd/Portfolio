@@ -216,7 +216,7 @@ header h3 {
     margin-top: 2%;
     text-transform: uppercase;
     text-align: left;
-    /* font-size: 3em; */
+    font-size: 1.5em;
     /* text-decoration: overline #FF7675; */
 }
 
@@ -402,8 +402,6 @@ header h3 {
         font-size: 3em;
     }
 
-    
-   
 }
 
 /* #endregion */
