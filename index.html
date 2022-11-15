@@ -17,6 +17,10 @@
         <title>Axel MINART | Portfolio</title>
     </head>
     <body>
+
+        <div class="cursor" id="cursor" ></div>
+
+
         <header id="header-container">
             <h3>Axel MINART</h3>
 
@@ -69,7 +73,7 @@
                 </div>
                 <div class="button-stack">
                     <button class="button cv-button" >CV</button>
-                    <button class="button contact-button" >CONTACTS</button>
+                    <button onclick="location.href = '#contact'" class="button contact-button" >CONTACTS</button>
                 </div>
 
             </div>
@@ -113,21 +117,21 @@
                 
                 <div class="contacts-stack">
                     <div class="contact-item">
-
-                        <svg class="contact-logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <svg onclick="window.location = 'mailto:axelminart.pro@gmail.com'" class="contact-logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                         </svg>
+
 
                         <div class="contact-title">Adresse Mail</div>
                         <div class="contact-desc">axelminart.pro@gmail.com</div>
                     </div>
                     <div class="contact-item">
-                        <img src="./public/linkedin-svgrepo-com.svg" class="contact-logo" />
+                        <img onclick="window.open('https://linkedin.com/in/axel-minart-4158881a4', '_blank').focus();" src="./public/linkedin-svgrepo-com.svg" class="contact-logo" />
                         <div class="contact-title">LinkedIn</div>
                         <div class="contact-desc">Mon compte linkedIn</div>
                     </div>
                     <div class="contact-item">
-                        <img src="./public/github-svgrepo-com.svg" class="contact-logo" />
+                        <img onclick="window.open('https://github.com/Axel-cmd', '_blank').focus();" src="./public/github-svgrepo-com.svg" class="contact-logo" />
                         
                         <div class="contact-title">Github</div>
                         <div class="contact-desc">Mon compte github pour voir mes projets</div>
@@ -142,7 +146,7 @@
 
         <footer class="footer">
             <div>
-                &copy; Developed by <a href="">A Minart</a>
+                &copy; Developed by <a href="">Axel Minart</a>
             </div>
         </footer>
 
