@@ -185,6 +185,7 @@ header h1 {
 .container hr {
     width: 60%;
     border: 1px solid #FF7675;
+    background-color: #FF7675;
 }
 
 /* #region HOME */
