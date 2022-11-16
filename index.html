@@ -12,7 +12,6 @@
 
         <!-- STYLES -->
         <link rel="stylesheet" href="./css/index.css">
-        <link rel="stylesheet" href="./css/nav.css">
 
         <title>Axel MINART | Portfolio</title>
     </head>
@@ -22,7 +21,7 @@
 
 
         <header id="header-container">
-            <h3>Axel MINART</h3>
+            <h1>Axel MINART</h1>
 
 
             <svg id="hamb-menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -33,6 +32,7 @@
             <nav class="navMenu">
                 <a href="#home">home</a>
                 <a href="#experiences">expériences</a>
+                <a href="#formations">formations</a>
                 <a href="#skills">compétences</a>
                 <a href="#projects">projets</a>
                 <a href="#contact">contact</a>
@@ -49,17 +49,18 @@
             <ul>
                 <li><a class="item-menu" href="#home">home</a></li>
                 <li><a class="item-menu" href="#experiences">expériences</a></li>
+                <li><a class="item-menu" href="#formations">formations</a></li>
                 <li><a class="item-menu" href="#skills">compétences</a></li>
                 <li><a class="item-menu" href="#projects">projets</a></li>
                 <li><a class="item-menu" href="#contact">contact</a></li>
             </ul>
         </div>
 
-        <section id="page-content">
+        <div id="page-content">
 
             <!-- accueil -->
 
-            <div class="container-home container" id="home">
+            <section class="container-home container" id="home">
                 <img class="home-svg" src="./public/22.svg" alt="SVG d'une personne sur un pc">
                 <div class="home-content">
                     <div class="home-text">Je suis,</div>
@@ -68,7 +69,7 @@
                         <span class="dynamic-text" id=dynamic-text></span>
                     </div>
 
-                    <div class="description">Autodidacte depuis plusieurs années dans le domaine de l'informatique qui est devenu une véritable passion.</div>
+                    <div class="description">Autodidacte depuis plusieurs années dans le domaine de l'informatique.<br/> J'en ai fait mon métier.</div>
                     
                    
 
@@ -78,12 +79,11 @@
                     <button onclick="location.href = '#contact'" class="button contact-button" >CONTACT</button>
                 </div>
 
-            </div>
+            </section>
 
 
             <!-- expériences -->
-
-            <div class="container" id="experiences">
+            <section class="container" id="experiences">
                 <hr>
                 <h2 class="container-title">expériences</h2>
 
@@ -100,9 +100,9 @@
                                 <div class="timeline__circle"></div>
                 
                                 
-                                <div class="timeline__title">Ingénieur Recherche et Développement Apprenti
+                                <div class="timeline__title">Ingénieur Recherche et Développement (Apprenti)
                                     <br> 
-                                    <span>Alcea - ASSA ABLOY</span>
+                                    <span>ALCEA - ASSA ABLOY</span>
                                 </div>
                             </div>
                 
@@ -112,7 +112,7 @@
                                     missions
                                 </div>
                                 <div class="timelien-mission-desc">
-                                    Développement d'un éditeur et d'un moteur d'animation graphique full web, dédiées à la création de solution de gestion technique des bâtiments, contrôle d'accès et détection d'intrusion.
+                                    Développement d'un éditeur et d'un moteur d'animation graphique full web, dédiés à la création de solution de gestion technique des bâtiments, contrôle d'accès et détection d'intrusion.
                                     <br/>
                                     Création d'objet 3D avec Blender.
                                 </div>
@@ -120,15 +120,102 @@
                                     compétences
                                 </div>
                                 <div class="timeline-skills-desc">
-                                    Blender / Angular / Babylon.js / Angular Material / C# / Typescript
+                                    Blender / Angular / Babylon.js / WebGl / WebGPU / Angular Material / C# / Typescript
                                 </div>
                                 <div class="timeline-footer">
                                     2021 - Aujourd'hui
                                 </div>
                             </div>
                         </div>
+
+
+                        <div class="timeline__item">
+                            <div class="timeline__top">
+                                <div class="timeline__circle"></div>
                 
-                        <!-- Repeat other items -->
+                                
+                                <div class="timeline__title">Ingénieur Recherche et Développement (Stagiaire)
+                                    <br> 
+                                    <span>ALCEA - ASSA ABLOY</span>
+                                </div>
+                            </div>
+                
+                            <!-- The description -->
+                            <div class="timeline__desc">
+                                <div class="timeline-desc-title">
+                                    missions
+                                </div>
+                                <div class="timelien-mission-desc">
+                                    Etude et développement d'une application d'animation en temps réel de synoptiques graphiques, dédiés à la gestion du contrôle d'accès et de la détection d'intrusion. Application développé en full web. 
+                                    <br />
+                                    <br />
+                                    Prise en main de la bibliothèque javascript Babylon.js, qui permet la création d'application 3D basé sur WebGL.
+                                    <br />
+                                    <br />
+                                    Connexion à une Websocket qui permet d'envoyer des données à l'application pour animer des objets 3D en temps réel.
+                                </div>
+                                <div class="timeline-desc-title">
+                                    compétences
+                                </div>
+                                <div class="timeline-skills-desc">
+                                    Babylon.js / Javascript / WebGl / Webpack 
+                                </div>
+                                <div class="timeline-footer">
+                                    juin 2020 - sept. 2020 · 4 mois
+                                </div>
+                            </div>
+                        </div>
+                
+                        
+
+                        <div class="timeline__item">
+                            <!-- The circle and title -->
+                            <div class="timeline__top">
+                                <!-- The circle -->
+                                <div class="timeline__circle"></div>
+                
+                                <!-- The title -->
+                                <div class="timeline__title">préparateur de commandes
+                                    <br> 
+                                    <span>Delanchy prestations de services 91</span>
+                                </div>
+                            </div>
+                
+                            <!-- The description -->
+                            <div class="timeline__desc">
+                                <div class="timeline-desc-title">
+                                    missions
+                                </div>
+                                <div class="timelien-mission-desc">
+                                    Déballage et stockage des palettes reçues le matin. <br/>Préparation des palettes à envoyer aux destinataires.
+                                </div>
+                                <div class="timeline-desc-title">
+                                    compétences
+                                </div>
+                                <div class="timeline-skills-desc">
+                                    régularité / efficacité / rapidité 
+                                </div>
+                                <div class="timeline-footer">
+                                    septembre 2019 · 1 mois
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="container" id="formations">
+                <hr>
+                <h2 class="container-title">formations</h2>
+
+                <div class="timeline">
+
+                    <div class="timeline__line"></div>
+
+                    <div class="timeline__items">
+
                         <div class="timeline__item">
                             <!-- The circle and title -->
                             <div class="timeline__top">
@@ -137,9 +224,9 @@
                 
                                 <!-- The title -->
                                 <div class="timeline__title">
-                                    étudiant en informatique 
+                                    Chef de projet informatique
                                     <br> 
-                                    <span>Estiam * Ecole supérieur des technologies de l'information appliquées aux métiers</span>
+                                    <span>Estiam • Ecole supérieure des technologies de l'information appliquées aux métiers</span>
                                 </div>
                             </div>
                 
@@ -157,71 +244,65 @@
                             </div>
                         </div>
 
+
                         <div class="timeline__item">
-                            <!-- The circle and title -->
                             <div class="timeline__top">
-                                <!-- The circle -->
                                 <div class="timeline__circle"></div>
                 
-                                <!-- The title -->
-                                <div class="timeline__title">préparateur de commande
+                                <div class="timeline__title">
+                                    Baccalauréat Scientifique avec mention
                                     <br> 
-                                    <span>Delanchy prestations de services 91</span>
+                                    <span>Lycée Gaspard Monge, savigny-sur-orge</span>
                                 </div>
                             </div>
                 
                             <!-- The description -->
                             <div class="timeline__desc">
                                 <div class="timeline-desc-title">
-                                    missions
+                                    option
                                 </div>
                                 <div class="timelien-mission-desc">
-                                    Débalage et rangement des palettes reçus le matin. <br/>Préparation des palettes à renvoyer.
-                                </div>
-                                <div class="timeline-desc-title">
-                                    compétences
-                                </div>
-                                <div class="timeline-skills-desc">
-                                    régularité / efficacité / rapidité 
+                                    ISN • Informatique et Sciences Numérique
                                 </div>
                                 <div class="timeline-footer">
-                                    2019 - 1 mois
+                                    2016 - 2019
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
 
-            </div>
+            </section>
 
-
-            <div class="container" id="skills">
+            <section class="container" id="skills">
                 <hr>
                 <h2 class="container-title">compétences</h2>
 
                 <img src="./public/304.svg" class="loader-img" alt="Image">
                 <div class="loader" >EN COURS...</div>
 
-            </div>
+            </section>
 
-            <div class="container" id="projects">
+            <section class="container" id="projects">
                 <hr>
                 <h2 class="container-title">projets</h2>
 
                 <img src="./public/304.svg" class="loader-img" alt="Image">
                 <div class="loader" >EN COURS...</div>
 
-            </div>
+            </section>
 
 
-            <div class="container" id="contact">
+            <section class="container" id="contact">
                 <hr>
                 <h2 class="container-title">contact</h2>
 
                 <!-- <img src="./public/304.svg" class="loader-img" alt="Image">
                 <div class="loader" >EN COURS...</div> -->
 
-                <div class="contacts-info" >où vous pouvez me trouver</div>
+                <div class="contacts-info" >keep in touch</div>
                 
                 <div class="contacts-stack">
                     <div class="contact-item">
@@ -246,11 +327,11 @@
                     </div>
                 </div>
 
-            </div>
+            </section>
 
             
 
-        </section>
+        </div>
 
         <footer class="footer">
             <div>
@@ -261,5 +342,6 @@
     </body>
 
     <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="./js/index.js"></script>
 </html>
