@@ -462,11 +462,11 @@ header h1 {
     display: flex;
 }
 
-.accordion-content-button svg {
+/* .accordion-content-button svg {
     width: 15px;
     margin: 0;
     margin-left: 5px;
-}
+} */
 
 .accordion__item--collapsed .accordion__content {
     display: none;
