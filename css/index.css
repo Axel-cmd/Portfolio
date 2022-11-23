@@ -433,11 +433,12 @@ header h1 {
     width: 100%;
     font-size: 1.2em;
     font-weight: 700;
+    margin-bottom: 1%;
 }
 
-.content-section .section-text {
+/* .content-section .section-text {
     margin: 2% 0;
-}
+} */
 
 
 
@@ -717,6 +718,10 @@ header h1 {
     .progress-bar {
         width: 80%;
     }
+
+    .accordion {
+        font-size: 1.25em
+    };
 
     .accordion__content .content-section {
         font-size: 1.2em;
