@@ -376,14 +376,14 @@ header h1 {
 /* #region PROJECT */
 
 .accordion {
-    border: 2px solid #575d5f;
+    border: 1px solid #575d5f;
     border-bottom-color: transparent;
     border-radius: 4px;
     width: 100%;
 }
 
 .accordion__item {
-    border-bottom: 2px solid #848787;
+    border-bottom: 1px solid #848787;
 }
 
 .accordion__header {
