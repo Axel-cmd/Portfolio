@@ -47,6 +47,14 @@ header h1 {
     margin: 0;
     padding: 0;
     font-size: 1.17em;
+    opacity: 0;
+    animation: titleAnimate 1s ease-in-out forwards;
+    transform: translateY(20px);
+}
+
+@keyframes titleAnimate {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 
 #hamb-menu {
@@ -778,7 +786,10 @@ header h1 {
     .skills-list {
         width: 90%;
     }
-
+    
+    .accordion {
+        width: 90%;
+    }
 }
 
 /* pc */
@@ -816,6 +827,8 @@ header h1 {
     .navMenu {
         width: 60%;
     }
+
+   
 
 }
 
