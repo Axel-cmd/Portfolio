@@ -52,26 +52,31 @@ function onScrollTransparentHeader(header) {
     }
 }
 
-function navHighlighter(sections){
-    let scrollY = window.scrollY;
+function changeAccordionState(accordion) {
+    accordion.classList.toggle('accordion__item--expanded');
+    accordion.classList.toggle('accordion__item--collapsed');
 
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
+    const svg = accordion.querySelector('svg');
+    svg.classList.toggle('accordion__toggle-open');
 
-        const sectionTop = (current.getBoundingClientRect().top + window.screenY) -1;
-        const sectionId = current.getAttribute("id");
-
-        if(scrollY > sectionTop && scrollY <= sectionTop+sectionHeight){
-            // console.log(`active ${sectionId}`)
-            const el = document.querySelector("a[href*=" + sectionId + "]")
-            console.log(el)
-            el.classList.add("active");
-        } else 
-        {
-            // document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
-        }
-    });
 }
+
+function addEventOnAccordion(element, allElement) {
+
+    const header = element.querySelector('.accordion__header');
+
+    header.addEventListener('click', () => {
+        
+        allElement.forEach(e => {
+            if(e !== element && e.classList.contains('accordion__item--expanded')){
+                changeAccordionState(e)
+            }
+        });
+
+        changeAccordionState(element);
+    })
+}
+
 
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -80,7 +85,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const itemMenu = document.getElementsByClassName("item-menu");
     const dynamicContent = document.getElementById("container-dynamic");
     const header = document.getElementById("header-container");
-    const sections = document.querySelectorAll("section[id]");
+
+    const accordionItem = document.querySelectorAll(".accordion__item")
 
     /****   MENU  ****/
     
@@ -90,19 +96,14 @@ window.addEventListener("DOMContentLoaded", () => {
         })
     }
    
-
     hambMenu.addEventListener('click', () => {
-        // header.classList.remove("partially-transparent")
         navMenuTel.style.right = 0;
-
     })
 
     const closeNavMenuTel = document.getElementById('close-wrapper');
 
     closeNavMenuTel.addEventListener('click', () => {
         navMenuTel.style.right = "-100%";
-        // header.classList.add("partially-transparent");
-
     })
 
     /****** TEXTE DYNAMIQUE ******/
@@ -126,5 +127,6 @@ window.addEventListener("DOMContentLoaded", () => {
         cursor.style.top = e.clientY + "px";
     });
 
+    accordionItem.forEach(element => addEventOnAccordion(element, accordionItem))
 })
 
