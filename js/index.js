@@ -1,46 +1,46 @@
-
 class DynamicText {
-    constructor(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
+    constructor(container, textList, period)
+    {
+        this.container = container;
+        this.textList = JSON.parse(textList); // Parse string to have a table
+        this.period = parseInt(period, 10) || 2000; //default is 2000ms if cannot parse to int
+        this.actualText = '';
         this.isDeleting = false;
+        this.loopCount = 0;
+        // start to draw dynamic text
+        this.draw();
     }
-    tick() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+    draw() {
+        // get the current id of the element to draw
+        const currentTextId = this.loopCount % this.textList.length;
+        // get the full text
+        const fullText = this.textList[currentTextId];
 
-        this.el.innerHTML = '<span class="dynamic-text" id=dynamic-text>' + this.txt + '</span>';
+        // update actual text with the direction
+        this.actualText = this.isDeleting ? fullText.substring(0, this.actualText.length - 1) : fullText.substring(0, this.actualText.length + 1);
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+        // update dom
+        this.container.innerHTML = `<span class="dynamic-text" id=dynamic-text>${this.actualText}</span>`;
 
-        if (this.isDeleting) { delta /= 2; }
+        let delta = 200 - Math.random() * 100;
+        // make deleting faster
+        if(this.isDeleting) delta /= 2;
 
-        if (!this.isDeleting && this.txt === fullTxt) {
+        if(!this.isDeleting && this.actualText === fullText){
             delta = this.period;
             this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
+        } else if (this.isDeleting && this.actualText === ''){
             this.isDeleting = false;
-            this.loopNum++;
+            this.loopCount++;
             delta = 500;
         }
 
-        setTimeout(function () {
-            that.tick();
+        setTimeout(() => {
+            this.draw();
         }, delta);
     }
 }
-
 
 function onScrollTransparentHeader(header) {
     const posY = window.scrollY;
@@ -78,12 +78,17 @@ function addEventOnAccordion(element, allElement) {
 }
 
 
+// détecter la section 
+// https://stackoverflow.com/questions/68541873/detect-section-id-as-the-page-scrolled-down-with-vanilla-js
+
+
+
 window.addEventListener("DOMContentLoaded", () => {
 
     const hambMenu = document.getElementById("hamb-menu");
     const navMenuTel = document.getElementById("navMenuTel");
     const itemMenu = document.getElementsByClassName("item-menu");
-    const dynamicContent = document.getElementById("container-dynamic");
+    
     const header = document.getElementById("header-container");
 
     const accordionItem = document.querySelectorAll(".accordion__item")
@@ -108,12 +113,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
     /****** TEXTE DYNAMIQUE ******/
 
-    const toRotate = dynamicContent.getAttribute('data-type');
-    const period= dynamicContent.getAttribute('data-period');
+    const dynamicTextContainerList = document.querySelectorAll(".dynamic-text-container");
 
-    if(toRotate) {
-        new DynamicText(dynamicContent, JSON.parse(toRotate), period);
-    }
+    dynamicTextContainerList.forEach(dynamicTextContainer => {
+        // get attributes
+        const textList = dynamicTextContainer.getAttribute("data-text-list");
+        const period = dynamicTextContainer.getAttribute("data-period");
+    
+        if(textList) new DynamicText(dynamicTextContainer, textList, period);
+    });
 
 
     window.onscroll = function name(e) {
@@ -129,4 +137,3 @@ window.addEventListener("DOMContentLoaded", () => {
 
     accordionItem.forEach(element => addEventOnAccordion(element, accordionItem))
 })
-
