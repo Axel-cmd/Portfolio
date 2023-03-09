@@ -57,7 +57,7 @@ header h1 {
 }
 
 @keyframes fadeYTop {
-    from { opacity: 0; transform: translateY(20px);}
+    from { opacity: 0; transform: translateY(-20px);}
     to { opacity: 1; transform: translateY(0);}
 }
 
@@ -500,29 +500,6 @@ header h1 {
     font-weight: 600;
 }
 
-/* #contact::before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    background-image: url('../public/405.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-} */
-
-/* 
-.illustration {
-    position: absolute;
-    width: 25%;
-    right: 0;
-    top: 2%;
-} */
-
 .contacts-stack {
     width: 100%;
     display: flex;
@@ -539,6 +516,8 @@ header h1 {
     justify-content: center;
     align-items: center;
 }
+
+
 
 .contact-logo:hover {
     cursor: none;
@@ -558,6 +537,10 @@ header h1 {
     font-size: .75em;
     opacity: .8;
     text-align: center;
+}
+
+.contact-item:hover {
+    font-size: 1em;
 }
 
 /* #endregion */
