@@ -261,26 +261,19 @@ header h1 {
 /* #region EXPERIENCE */
 
 .timeline {
-    /* Used to position the left vertical line */
     position: relative;
     width: 100%;
 }
 
 .timeline__line {
-    /* Border */
     border-right: 2px solid #FF7675;
-
-    /* Positioned at the left */
     left: 0.75rem;
     position: absolute;
     top: 0px;
-
-    /* Take full height */
     height: 100%;
 }
 
 .timeline__items {
-    /* Reset styles */
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -294,23 +287,19 @@ header h1 {
 }
 
 .timeline__top {
-    /* Center the content horizontally */
     align-items: center;
     display: flex;
 }
 
 .timeline__circle {
-    /* Rounded border */
     background-color: #FF7675;
     border-radius: 9999px;
 
-    /* Size */
     height: 1.5rem;
     width: 1.5rem;
 }
 
 .timeline__title {
-    /* Take available width */
     flex: 1;
     margin-left: 0.5rem;
     color: #FF7675;
@@ -326,7 +315,6 @@ header h1 {
 }
 
 .timeline__desc {
-    /* Make it align with the title */
     margin-left: 2rem;
     font-size: .75em;
 }
@@ -496,6 +484,10 @@ header h1 {
 }
 .accordion__item--expanded .accordion__content {
     display: block;
+}
+
+.align-ul {
+    padding-left: 10px;
 }
 
 /* #endregion */
