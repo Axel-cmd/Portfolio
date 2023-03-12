@@ -402,8 +402,6 @@ header h1 {
 .accordion__header {
     align-items: center;
     display: flex;
-
-    /* cursor: pointer; */
     padding: 16px;
     font-size: .75em
 }
@@ -468,10 +466,13 @@ header h1 {
 
 .accordion__item--collapsed .accordion__content {
     display: none;
+
 }
 .accordion__item--expanded .accordion__content {
     display: block;
 }
+
+
 
 .align-ul {
     padding-left: 10px;
