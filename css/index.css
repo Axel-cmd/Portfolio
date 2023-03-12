@@ -21,6 +21,7 @@ body {
     cursor: none;
 }
 
+/* Par défaut le curseur spécial n'est pas affiché */
 .cursor {
     display: none;
 }
@@ -402,7 +403,7 @@ header h1 {
     align-items: center;
     display: flex;
 
-    cursor: pointer;
+    /* cursor: pointer; */
     padding: 16px;
     font-size: .75em
 }
@@ -445,14 +446,7 @@ header h1 {
     margin-bottom: 1%;
 }
 
-/* .content-section .section-text {
-    margin: 2% 0;
-} */
-
-
-
 .accordion__content .content-footer {
-    /* margin-bottom: 15%; */
     display: flex;
     justify-content: end;
     width: 100%;
@@ -471,12 +465,6 @@ header h1 {
     color: white;
     display: flex;
 }
-
-/* .accordion-content-button svg {
-    width: 15px;
-    margin: 0;
-    margin-left: 5px;
-} */
 
 .accordion__item--collapsed .accordion__content {
     display: none;
@@ -730,9 +718,9 @@ header h1 {
         font-size: 1.25em;
     }
 
-    /* .content-section */
-
 }
+
+
 
 /* tablette mode paysage */
 @media screen and (min-width: 1024px) {
@@ -749,22 +737,6 @@ header h1 {
         margin: 0;
     }
    
-    .cursor {
-        display: block;
-        position: fixed;
-        border-radius: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        pointer-events: none;
-        left: -100px;
-        top: 50%;
-        background-color: transparent;
-        z-index: 10000;
-        border: 2px solid #FF7675;
-        height: 30px;
-        width: 30px;
-        transition: all 50ms ease-out;
-    }
-
     .timeline {
         width: 90%;
     }
@@ -824,6 +796,25 @@ header h1 {
 
    
 
+}
+
+/* Pour avoir le pointeur spécifique sur le desktop quelque soit la taille de la page et uniquement en desktop */
+@media (pointer: fine), (pointer: none) {
+    .cursor {
+        display: block;
+        position: fixed;
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        pointer-events: none;
+        left: -100px;
+        top: 50%;
+        background-color: transparent;
+        z-index: 10000;
+        border: 2px solid #FF7675;
+        height: 30px;
+        width: 30px;
+        transition: all 50ms ease-out;
+    }
 }
 
 /* #endregion */
