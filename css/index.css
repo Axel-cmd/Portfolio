@@ -414,6 +414,7 @@ header h1 {
 
 .accordion__toggle-open {
     transform: rotate(90deg);
+    transition: all 0.3s ease-in-out;
 }
 .accordion__title {
     flex: 1;
@@ -427,6 +428,11 @@ header h1 {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+
+    /* ajouter après  */
+    transition: height 0.3s ease;
+    height: 0;
+    overflow: hidden;
 }
 
 .accordion__content .content-section {
