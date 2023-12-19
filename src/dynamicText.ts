@@ -11,7 +11,7 @@ export default class DynamicText {
   
     private isDeleting: boolean;
   
-    private loopCount: number;
+    private loopCount: number; 
   
     constructor(
       container: Element,
