@@ -2,7 +2,7 @@
 export default class DynamicText {
 
     private container: Element;
-    
+     
     private textList: string[];
   
     private period: number;
