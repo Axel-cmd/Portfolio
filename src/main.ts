@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
       globalStyle.innerHTML = `
           body {
               overflow: auto;
-          }
+          } 
       `;
     })
   } 
