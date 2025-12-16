@@ -1,13 +1,22 @@
 {
   "name": "mon-site-web",
-  "private": true,
   "version": "0.0.0",
+  "description": "Personal developer portfolio website built with vanilla TypeScript and Vite",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "keywords": [
+    "portfolio",
+    "typescript",
+    "vite",
+    "vanilla-js",
+    "website"
+  ],
+  "author": "Axel MINART",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
