@@ -102,4 +102,21 @@ export default class DynamicText {
       }, delta);
     }
   
-  }
+}
+
+/**
+ * Initializes dynamic text animations.
+ * Finds all elements with the 'dynamic-text-container' class and initializes DynamicText instances.
+ */
+export function initDynamicText(): void {
+  const dynamicTextContainerList = document.querySelectorAll(".dynamic-text-container");
+
+  dynamicTextContainerList.forEach(dynamicTextContainer => {
+    const textList = dynamicTextContainer.getAttribute("data-text-list");
+    const period = dynamicTextContainer.getAttribute("data-period");
+
+    if (textList) {
+      new DynamicText(dynamicTextContainer, textList, period ?? undefined);
+    }
+  });
+}
